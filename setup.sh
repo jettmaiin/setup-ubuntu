@@ -6,6 +6,11 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+# Настройка времени
+timedatectl set-timezone Europe/Moscow
+apt install -y ntp
+systemctl enable ntp
+
 # Определяем доступную оперативную память
 RAM_KB=$(grep MemTotal /proc/meminfo | awk '{print $2}')
 RAM_MB=$((RAM_KB / 1024))
