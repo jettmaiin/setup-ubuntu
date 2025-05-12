@@ -36,7 +36,7 @@ cat >/etc/fail2ban/jail.local <<EOF
 [sshd]
 enabled = true
 port = $SSHPORT
-filter = ssh
+filter = sshd
 logpath = /var/log/auth.log
 maxretry = 5
 findtime = 1h
