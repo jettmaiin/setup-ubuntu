@@ -112,6 +112,6 @@ echo "Смена пароля пользователя $NEWUSER"
 passwd "$NEWUSER"
 
 # Установка базовых пакетов
-apt install -y curl wget git net-tools zip unzip tmux htop 
+apt install -y curl wget git net-tools zip unzip tmux htop tree 
 
 echo "Настройка завершена. SSH теперь работает на порту $SSHPORT. Пользователь $NEWUSER добавлен."

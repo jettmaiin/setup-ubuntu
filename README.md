@@ -1,16 +1,69 @@
-# setup-ubuntu
-This script make easy life for all of ME
+# Ubuntu Server Setup Script 🚀
 
-What is it do:
-1) Add new user
-2) Install ssh, curl, wget, git, fail2ban, ufw
-3) Update and upgrade packages
-4) Change ssh port and disable root connection
-5) Configure fail2ban and ufw
-6) Change passwords for new user and root
+![Bash](https://img.shields.io/badge/-Bash-4EAA25?logo=gnu-bash&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/-Ubuntu-E95420?logo=ubuntu&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
+Automated setup script for Ubuntu servers that configures security, performance and essential tools with one command.
 
-# How to install script
-1. If you have wget `bash <(wget -O- https://raw.githubusercontent.com/jettmaiin/setup-ubuntu/main/setup.sh)`
-2. If you have curl `bash <(curl -fSL https://raw.githubusercontent.com/jettmaiin/setup-ubuntu/main/setup.sh)`
-3. Or just copy file
+## ✨ Features
+
+- 🔒 **Security Hardening**
+  - SSH port change & root login disable
+  - Fail2Ban protection
+  - UFW firewall setup
+  - Automatic security updates
+
+- ⚡ **Performance Optimization**
+  - Smart swap configuration (auto-sized)
+
+- 🛠️ **Essential Tools**
+  ```bash
+  ssh, curl, wget, git, fail2ban, ufw, 
+  net-tools, zip/unzip, tmux, htop, tree, ntp
+  ```
+- 👥 **User Management**
+  - Create new sudo user
+  - Secure password setup
+
+- ⏰ **Time Synchronization**
+  - Automatic NTP configuration
+  - Moscow timezone setup
+
+# 🚀 Installation
+
+Run this single command as root:
+`bash <(curl -fsSL https://raw.githubusercontent.com/jettmaiin/setup-ubuntu/main/setup.sh)`
+
+Or with wget:
+`bash <(wget -O- https://raw.githubusercontent.com/jettmaiin/setup-ubuntu/main/setup.sh)`
+
+# 🛠️ Manual Setup
+1. Download the script: `wget https://raw.githubusercontent.com/jettmaiin/setup-ubuntu/main/setup.sh`
+2. Make it executable: `chmod +x setup.sh`
+3. Run as root: `sudo ./setup.sh`
+
+📜 License
+```text
+MIT License
+
+Copyright (c) 2025 jettmaiin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
