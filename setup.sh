@@ -7,7 +7,9 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # Обновление системы и установка SSH
-apt update && apt -y upgrade
+export DEBIAN_FRONTEND=noninteractive
+apt update
+apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
 apt install -y ssh
 
 # Добавление второго пользователя
