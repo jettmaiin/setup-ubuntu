@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 # Проверка запуска от root
 if [[ $EUID -ne 0 ]]; then
    echo "Этот скрипт нужно запускать от root"
