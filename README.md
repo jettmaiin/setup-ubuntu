@@ -6,7 +6,7 @@
 
 Automated setup script for Ubuntu servers that configures security, performance and essential tools with one command.
 
-## ✨ Features
+# ✨ Features
 
 - 🔒 **Security Hardening**
   - SSH port change & root login disable
