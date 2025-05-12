@@ -12,7 +12,6 @@ Automated setup script for Ubuntu servers that configures security, performance 
   - SSH port change & root login disable
   - Fail2Ban protection
   - UFW firewall setup
-  - Automatic security updates
 
 - ⚡ **Performance Optimization**
   - Smart swap configuration (auto-sized)
