@@ -6,7 +6,7 @@
 
 Automated setup script for Ubuntu servers that configures security, performance and essential tools with one command.
 
-# ✨ Features
+## ✨ Features
 
 - ### 🔒 **Security Hardening**
   - SSH port change & root login disable
@@ -29,7 +29,7 @@ Automated setup script for Ubuntu servers that configures security, performance 
   - Automatic NTP configuration
   - Moscow timezone setup
 
-# 🚀 Installation
+## 🚀 Installation
 
 Run this single command as root:
 `bash <(curl -fsSL https://raw.githubusercontent.com/jettmaiin/setup-ubuntu/main/setup.sh)`
@@ -37,12 +37,12 @@ Run this single command as root:
 Or with wget:
 `bash <(wget -O- https://raw.githubusercontent.com/jettmaiin/setup-ubuntu/main/setup.sh)`
 
-# 🛠️ Manual Setup
+### 🛠️ Manual Setup
 1. Download the script: `wget https://raw.githubusercontent.com/jettmaiin/setup-ubuntu/main/setup.sh`
 2. Make it executable: `chmod +x setup.sh`
 3. Run as root: `sudo ./setup.sh`
 
-# 📜 License
+## 📜 License
 ```text
 MIT License
 
