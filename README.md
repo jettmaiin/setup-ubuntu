@@ -8,24 +8,24 @@ Automated setup script for Ubuntu servers that configures security, performance 
 
 # ✨ Features
 
-- 🔒 **Security Hardening**
+- ### 🔒 **Security Hardening**
   - SSH port change & root login disable
   - Fail2Ban protection
   - UFW firewall setup
 
-- ⚡ **Performance Optimization**
+- ### ⚡ **Performance Optimization**
   - Smart swap configuration (auto-sized)
 
-- 🛠️ **Essential Tools**
+- ### 🛠️ **Essential Tools**
   ```bash
   ssh, curl, wget, git, fail2ban, ufw, 
   net-tools, zip/unzip, tmux, htop, tree, ntp
   ```
-- 👥 **User Management**
+- ### 👥 **User Management**
   - Create new sudo user
   - Secure password setup
 
-- ⏰ **Time Synchronization**
+- ### ⏰ **Time Synchronization**
   - Automatic NTP configuration
   - Moscow timezone setup
 
@@ -42,7 +42,7 @@ Or with wget:
 2. Make it executable: `chmod +x setup.sh`
 3. Run as root: `sudo ./setup.sh`
 
-📜 License
+# 📜 License
 ```text
 MIT License
 
