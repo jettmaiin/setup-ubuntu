@@ -50,7 +50,7 @@ systemctl restart fail2ban
 ufw allow "$SSHPORT"/tcp
 ufw allow 80/tcp
 ufw allow 443/tcp
-ufw enable
+echo "y" | ufw enable
 
 # Смена паролей root и второго пользователя
 echo "Смена пароля root"
