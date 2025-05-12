@@ -14,7 +14,10 @@ apt install -y ssh
 
 # Добавление второго пользователя
 read -p "Введите имя второго пользователя: " NEWUSER
-adduser --gecos "" --disabled-password "$USERNAME"
+if id "$USERNAME" &>/dev/null; then
+    echo "Пользователь $USERNAME уже существует, пропускаем создание."
+else
+    adduser --gecos "" --disabled-password "$USERNAME"
 
 # Изменение порта SSH и запрет root-доступа
 read -p "Введите новый порт для SSH (например, 2222): " SSHPORT
