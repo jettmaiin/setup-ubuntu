@@ -15,9 +15,17 @@ apt install -y ssh
 # Добавление второго пользователя
 read -p "Введите имя второго пользователя: " NEWUSER
 if id "$NEWUSER" &>/dev/null; then
-    echo "Пользователь $NEWUSER уже существует, пропускаем создание."
+    echo "Пользователь $NEWUSER уже существует, проверяем sudo права..."
+    if ! groups "$NEWUSER" | grep -q '\bsudo\b'; then
+        usermod -aG sudo "$NEWUSER"
+        echo "Пользователь $NEWUSER добавлен в группу sudo."
+    else
+        echo "Пользователь $NEWUSER уже имеет sudo права."
+    fi
 else
     adduser --gecos "" --disabled-password "$NEWUSER"
+    usermod -aG sudo "$NEWUSER"
+    echo "Пользователь $NEWUSER создан и добавлен в sudo."
 fi
 
 # Изменение порта SSH и запрет root-доступа
