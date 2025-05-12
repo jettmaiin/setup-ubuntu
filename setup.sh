@@ -67,6 +67,6 @@ echo "Смена пароля пользователя $NEWUSER"
 passwd "$NEWUSER"
 
 # Установка базовых пакетов
-apt install -y curl wget git
+apt install -y curl wget git net-tools
 
 echo "Настройка завершена. SSH теперь работает на порту $SSHPORT. Пользователь $NEWUSER добавлен."
